@@ -1,6 +1,6 @@
 cask "antigravity-monitor" do
-  version "1.5.1"
-  sha256 "4e9fc5cfccbcfa4817ca0e19b4fffb88df4b74080fa5d6e145710be737755248"
+  version "1.5.2"
+  sha256 "8ff2f73ddf9a28f30cb9dc3dd9a097e60f49a74545ea368a89c406cabec0eb38"
 
   url "https://github.com/ktw1982-coder/antigravity-usage-extension/releases/download/v#{version}/AntigravityMonitor-v#{version}-macOS.zip"
   name "Antigravity Monitor"
