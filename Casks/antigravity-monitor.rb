@@ -1,6 +1,6 @@
 cask "antigravity-monitor" do
-  version "1.5.8"
-  sha256 "08da521046e5a7e0252193b4b7225caa57e5abcd7b3aafd5f3f81f27bfd2af1f"
+  version "1.5.9"
+  sha256 "772f64968953d4223b8818a944a9d4af7fce0fee0a2dc960e5a2d7acaa6c9a9d"
 
   url "https://github.com/ktw1982-coder/antigravity-usage-extension/releases/download/v#{version}/AntigravityMonitor-v#{version}-macOS.zip"
   name "Antigravity Monitor"
@@ -8,6 +8,11 @@ cask "antigravity-monitor" do
   homepage "https://github.com/ktw1982-coder/antigravity-usage-extension"
 
   app "AntigravityMonitor.app"
+
+  postflight do
+    system_command "xattr",
+                   args: ["-cr", "#{appdir}/AntigravityMonitor.app"]
+  end
 
   zap trash: [
     "~/Library/LaunchAgents/com.taewoong.AntigravityMonitor.plist",
